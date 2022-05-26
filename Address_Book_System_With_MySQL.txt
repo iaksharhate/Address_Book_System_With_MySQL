@@ -66,3 +66,26 @@ mysql> desc address_book;
 | email        | varchar(50) | YES  |     | NULL    |       |
 +--------------+-------------+------+-----+---------+-------+
 8 rows in set (0.05 sec)
+____________________________________________________________________
+
+UC 3 :Ability to insert new Contacts to Address Book
+____________________________________________________________________
+
+mysql> insert into address_book values
+    -> ('Akshar','Hate','KhandaColony','Panvel','Maharashtra','410206','8850463876','akshar@gmail.com'),
+    -> ('Yogesh','More','Asudgaon','Panvel','Maharashtra','410206','8899775544','yogesh143@gmail.com'),
+    -> ('Raj','Kawale','ShivajiNagar','Pune','Maharashtra','411302','9988664477','raj@gmail.com'),
+    -> ('Swati','Badole','WhiteField','Banaswadi','Bangalore','560038','6677554422','swati@gmail.com');
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_book;
++------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
+| first_name | last_name | address      | city      | state       | zip    | phone_number | email               |
++------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
+| Akshar     | Hate      | KhandaColony | Panvel    | Maharashtra | 410206 | 8850463876   | akshar@gmail.com    |
+| Raj        | Kawale    | ShivajiNagar | Pune      | Maharashtra | 411302 | 9988664477   | raj@gmail.com       |
+| Swati      | Badole    | WhiteField   | Banaswadi | Bangalore   | 560038 | 6677554422   | swati@gmail.com     |
+| Yogesh     | More      | Asudgaon     | Panvel    | Maharashtra | 410206 | 8899775544   | yogesh143@gmail.com |
++------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
+4 rows in set (0.00 sec)
