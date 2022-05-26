@@ -1,8 +1,37 @@
 @Akshar Jitendra Hate
-
-
 ____________________________________________________________________
 
 Welcome to Address Book System
-
 ____________________________________________________________________
+
+UC 1 :Ability to create a Address Book Service DB
+____________________________________________________________________
+
+mysql> create database Records;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> show databases;
++--------------------------+
+| Database                 |
++--------------------------+
+| customer                 |
+| employee_payroll_service |
+| employees                |
+| information_schema       |
+| mysql                    |
+| payroll_service          |
+| performance_schema       |
+| records                  |
+| sys                      |
++--------------------------+
+9 rows in set (0.00 sec)
+
+mysql> use records;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| records    |
++------------+
+1 row in set (0.00 sec)
