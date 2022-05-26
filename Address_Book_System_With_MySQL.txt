@@ -184,3 +184,18 @@ mysql> select state, count(*) from address_book group by state;
 | Bangalore   |        1 |
 +-------------+----------+
 2 rows in set (0.00 sec)
+____________________________________________________________________
+
+UC 8: Ability to retrieve entries sorted alphabetically by Person’s
+name for a given city
+____________________________________________________________________
+
+mysql>  select first_name,city from address_book order by first_name;
++------------+-----------+
+| first_name | city      |
++------------+-----------+
+| Akshar     | Panvel    |
+| Swati      | Banaswadi |
+| Yogesh     | Panvel    |
++------------+-----------+
+3 rows in set (0.00 sec)
