@@ -123,3 +123,20 @@ mysql> select * from address_book;
 | Yogesh     | More      | Asudgaon     | Panvel    | Maharashtra | 410206 | 8899775544   | yogesh143@gmail.com |
 +------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
 4 rows in set (0.04 sec)
+____________________________________________________________________
+
+UC 5: Ability to delete contact person using their name
+____________________________________________________________________
+
+mysql> delete from address_book where first_name = 'Raj';
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from address_book;
++------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
+| first_name | last_name | address      | city      | state       | zip    | phone_number | email               |
++------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
+| Akshar     | Hate      | KhandaColony | Panvel    | Maharashtra | 410206 | 9702848726   | akshar@gmail.com    |
+| Swati      | Badole    | WhiteField   | Banaswadi | Bangalore   | 560038 | 6677554422   | swati@gmail.com     |
+| Yogesh     | More      | Asudgaon     | Panvel    | Maharashtra | 410206 | 8899775544   | yogesh143@gmail.com |
++------------+-----------+--------------+-----------+-------------+--------+--------------+---------------------+
+3 rows in set (0.04 sec)
