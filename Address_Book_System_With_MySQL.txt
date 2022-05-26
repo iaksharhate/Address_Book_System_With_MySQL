@@ -162,3 +162,25 @@ mysql> select * from address_book where state = 'Bangalore';
 | Swati      | Badole    | WhiteField | Banaswadi | Bangalore | 560038 | 6677554422   | swati@gmail.com |
 +------------+-----------+------------+-----------+-----------+--------+--------------+-----------------+
 1 row in set (0.00 sec)
+____________________________________________________________________
+
+UC 7: Ability to understand the size of address book by City and State
+____________________________________________________________________
+
+mysql> select city, count(*) from address_book group by city;
++-----------+----------+
+| city      | count(*) |
++-----------+----------+
+| Panvel    |        2 |
+| Banaswadi |        1 |
++-----------+----------+
+2 rows in set (0.04 sec)
+
+mysql> select state, count(*) from address_book group by state;
++-------------+----------+
+| state       | count(*) |
++-------------+----------+
+| Maharashtra |        2 |
+| Bangalore   |        1 |
++-------------+----------+
+2 rows in set (0.00 sec)
